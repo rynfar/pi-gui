@@ -1,5 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { CodeBlock } from "./code-block";
 
 const REMARK_PLUGINS = [remarkGfm];
 
@@ -10,11 +11,7 @@ const MARKDOWN_COMPONENTS = {
     if (!className) {
       return <code>{code}</code>;
     }
-    return (
-      <pre data-language={language}>
-        <code className={className}>{code}</code>
-      </pre>
-    );
+    return <CodeBlock code={code} language={language} />;
   },
   a: ({ href, children }: { href?: string; children?: React.ReactNode }) => (
     <a href={href} rel="noreferrer" target="_blank">
