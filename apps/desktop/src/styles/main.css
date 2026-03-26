@@ -758,10 +758,10 @@
   font-style: normal !important;
 }
 
-/* Shiki dual-theme: use --shiki-light in light mode, --shiki-dark in dark mode */
+/* Shiki dual-theme: light mode uses inline color (vitesse-dark tokens).
+   Dark mode swaps to --shiki-dark (vitesse-light tokens). */
 .code-block__body .shiki,
 .code-block__body .shiki span {
-  color: var(--shiki-light) !important;
   background-color: transparent !important;
 }
 

@@ -39,10 +39,10 @@ export function CodeBlock({
       return h.codeToHtml(code, {
         lang,
         themes: {
-          light: "vitesse-dark", // dark bg for light mode (Crystal Grid style)
-          dark: "vitesse-light", // light-on-dark for app dark mode
+          light: "night-owl", // vibrant dark theme for light-mode code blocks
+          dark: "night-owl-light", // light variant for app dark mode
         },
-        defaultColor: false,
+        defaultColor: "light", // inline color from the "light" key (night-owl)
       });
     } catch {
       return null;

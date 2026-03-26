@@ -18,7 +18,7 @@ export async function getHighlighter(): Promise<Highlighter> {
 
   loading = import("shiki/bundle/web").then(async ({ createHighlighter }) => {
     const h = await createHighlighter({
-      themes: ["vitesse-dark", "vitesse-light"],
+      themes: ["night-owl", "night-owl-light"],
       langs: [
         "javascript",
         "typescript",
